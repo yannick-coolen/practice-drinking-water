@@ -3,7 +3,7 @@ const liters = <HTMLElement> document.querySelector('#liters');
 const percentage = <HTMLStyleElement>document.querySelector('#percentage');
 const remained = <HTMLStyleElement>document.querySelector('#remained');
 
-smallCups.forEach((cup, idx: number): void => {
+smallCups.forEach((cup: Element, idx: number): void => {
   cup.addEventListener('click', () => {
     highlightCups(idx);
   });
@@ -29,7 +29,7 @@ const highlightCups = (idx: number): void => {
 };
 
 const updateBigCup = (): void => {
-    const fullCups = document.querySelectorAll('.cup-small.full').length;
+    const fullCups: number = document.querySelectorAll('.cup-small.full').length;
     const totalCups: number = smallCups.length;
     const height: number = 0;
   
